@@ -1,44 +1,47 @@
-.hero-main{
+.hero-main {
   margin: 120px 60px;
- display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
-    gap: 20px; /* Adjusts the space between columns */
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  gap: 20px;
+  align-items: center;
 }
-.hero{
+
+.hero {
   display: flex;
   flex-direction: column;
 }
-.img-profile{
+
+.img-profile {
   display: flex;
   justify-content: center;
 }
-.hero-main img{
 
+.hero-main img {
   height: 80%;
   width: 80%;
   border-radius: 60px;
-
 }
-.hero h1{
+
+.hero h1 {
   text-align: left;
-  /* width: 44%; */
   font-size: 50px;
   font-weight: 600;
 }
-.hero p{
-   /* width: 50%; */
-   text-align: left;
-   font-size: 24px;
-   line-height: 40px;
+
+.hero p {
+  text-align: left;
+  font-size: 24px;
+  line-height: 40px;
 }
-.hero h1 span{
-  background: linear-gradient(270deg,#DF8908 10%, #B415FF 100%);
+
+.hero h1 span {
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-action{
+
+.hero-action {
   display: flex;
   justify-content: space-between;
   gap: 25px;
@@ -46,55 +49,76 @@
   font-weight: 500;
   margin-bottom: 50px;
   margin-top: 50px;
-
 }
-.hero-connect{
+
+.hero-connect {
   padding: 10px 35px;
   border-radius: 50px;
-  background: linear-gradient(264deg, #DF8908 -5.09%,#B415FF 106.28%);
+  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
   cursor: pointer;
 }
-.hero-resume{
+
+.hero-resume {
   padding: 10px 40px;
   border-radius: 50px;
   border: 2px solid #fff;
   cursor: pointer;
 }
-.hero-connect:hover{
+
+.hero-connect:hover {
   border: 2px solid white;
 }
-.hero-resume:hover{
+
+.hero-resume:hover {
   border-color: #B415FF;
 }
-@media(max-width:768px){
-  .hero img{
-    margin-top: 120px;
-    width: 260px;
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .hero-main {
+    grid-template-columns: 1fr; /* Single column layout */
+    text-align: center;
+    margin: 60px 20px;
   }
-  .hero h1{
-    margin-top: 50px;
-    width: 90px;
-    font-size: 50px;
+
+  .hero h1 {
+    font-size: 32px; /* Reduce title size */
+    width: auto;
+    margin-top: 20px;
   }
-  .hero p{
-    width: 60%;
+
+  .hero p {
     font-size: 18px;
-    line-height: 32px;
-    margin: 10px 0;
+    line-height: 28px;
+    width: 90%;
+    margin: 10px auto;
   }
-  .hero-action{
+
+  .hero-action {
+    flex-direction: column; /* Stack buttons */
+    align-items: center;
     gap: 16px;
     font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    margin-top: 30px;
   }
-  .hero-connect{
-    padding: 20px 30px;
-    border-radius: 40px;
 
+  .hero-connect, .hero-resume {
+    padding: 14px 28px;
+    width: auto;
   }
-  .hero-resume{
-    padding: 20px 50px;
-    border-radius: 40px;
+
+  /* ✅ Fix Image Display on Mobile */
+  .img-profile {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-profile img {
+    width: 180px; /* Reduce image size for mobile */
+    height: auto;
+    border-radius: 50%;
+    display: block; /* Ensure visibility */
   }
 }
+
