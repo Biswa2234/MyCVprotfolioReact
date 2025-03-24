@@ -22,23 +22,34 @@ const Navbar = () => {
   }
 
   return (
-    <div className='navbar'>
-      <div className='logo' >Biswa</div>
-      <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
-      <ul ref={menuRef} className="nav-menu">
-        <img src={menu_close} onClick={closeMenu} alt="" className='nav-mob-close' />
-        <li><AnchorLink className="anchor-link" href='#home'><p onClick={() => setMenu("home")}>Home</p></AnchorLink>{menu === "home" ? <img src={underline} alt='' /> : <></>}</li>
 
-        <li><AnchorLink className="anchor-link" offset={50} href='#about'><p onClick={() => setMenu("about")}>AboutMe</p></AnchorLink>{menu === "about" ? <img src={underline} alt='' /> : <></>}</li>
+    <>
+      <div className='bg-nav'>
+        <div className='navbar'>
+        <a href="/">
 
-        <li><AnchorLink className="anchor-link" offset={50} href='#services'><p onClick={() => setMenu("services")}>Services</p></AnchorLink>{menu === "services" ? <img src={underline} alt='' /> : <></>}</li>
 
-        <li><AnchorLink className="anchor-link" offset={50} href='#work'><p onClick={() => setMenu("work")}>Protfolio</p></AnchorLink>{menu === "work" ? <img src={underline} alt='' /> : <></>}</li>
+        <div className='logo' >Biswa</div>
+        </a>  
+          <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
+          <ul ref={menuRef} className="nav-menu">
+            <img src={menu_close} onClick={closeMenu} alt="" className='nav-mob-close' />
+            <li><AnchorLink className="anchor-link" href='#home'><p onClick={() => setMenu("home")}>Home</p></AnchorLink>{menu === "home" ? <img src={underline} alt='' /> : <></>}</li>
 
-        <li><AnchorLink className="anchor-link" offset={50} href='#contact'><p onClick={() => setMenu("contact")}>Contact</p></AnchorLink>{menu === "contact" ? <img src={underline} alt='' /> : <></>}</li>
-      </ul>
-      <div className="nav-connect"> <AnchorLink className="anchor-link" offset={50} href='#contact'>Connect with me </AnchorLink></div>
-    </div>
+            <li><AnchorLink className="anchor-link" offset={50} href='#about'><p onClick={() => setMenu("about")}>AboutMe</p></AnchorLink>{menu === "about" ? <img src={underline} alt='' /> : <></>}</li>
+
+            <li><AnchorLink className="anchor-link" offset={50} href='#services'><p onClick={() => setMenu("services")}>Services</p></AnchorLink>{menu === "services" ? <img src={underline} alt='' /> : <></>}</li>
+
+            <li><AnchorLink className="anchor-link" offset={50} href='#work'><p onClick={() => setMenu("work")}>Protfolio</p></AnchorLink>{menu === "work" ? <img src={underline} alt='' /> : <></>}</li>
+
+            <li><AnchorLink className="anchor-link" offset={50} href='#contact'><p onClick={() => setMenu("contact")}>Contact</p></AnchorLink>{menu === "contact" ? <img src={underline} alt='' /> : <></>}</li>
+          </ul>
+          <div className="nav-connect"> <AnchorLink className="anchor-link" offset={50} href='#contact'>Connect with me </AnchorLink></div>
+        </div>
+
+      </div>
+    </>
+
   )
 }
 

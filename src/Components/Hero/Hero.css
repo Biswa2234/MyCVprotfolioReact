@@ -1,5 +1,5 @@
 .hero-main{
-  margin: 20px 60px;
+  margin: 120px 60px;
  display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
     gap: 20px; /* Adjusts the space between columns */
@@ -7,7 +7,6 @@
 }
 .hero{
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 .img-profile{
@@ -41,7 +40,7 @@
 }
 .hero-action{
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 25px;
   font-size: 24px;
   font-weight: 500;
